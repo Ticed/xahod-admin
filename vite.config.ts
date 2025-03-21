@@ -1,18 +1,38 @@
-import path from 'path'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
+import path from 'path';
+import { defineConfig, loadEnv } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import tailwind from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), TanStackRouterVite()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+export default defineConfig(({ mode }) => {
+  const rootDir = path.resolve(__dirname, 'src');
+  const env = loadEnv(mode, process.cwd(), '');
+  const production = env.NODE_ENV === 'production';
 
-      // fix loading all icon chunks in dev mode
-      // https://github.com/tabler/tabler-icons/issues/1233
-      '@tabler/icons-react': '@tabler/icons-react/dist/esm/icons/index.mjs',
+  return {
+    root: rootDir,
+    base: '/',
+    appType: 'spa',
+    plugins: [
+      vue(),
+    ],
+    css: {
+      postcss: {
+        plugins: [
+          autoprefixer(),
+          tailwind(),
+        ],
+      },
     },
-  },
-})
+    resolve: {
+      alias: {
+        '@': rootDir,
+      }
+    },
+    build: {
+      minify: production,
+      sourcemap: production,
+      outDir: path.resolve(rootDir, '..', 'dist'),
+    },
+  }
+});

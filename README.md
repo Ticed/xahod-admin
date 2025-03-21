@@ -1,67 +1,27 @@
-# Shadcn Admin Dashboard
+<p align="center">
+ <img align="center" src="https://raw.githubusercontent.com/radix-vue/shadcn-vue/dev/apps/www/src/public/android-chrome-192x192.png" height="96" />
+ <h1 align="center">
+  Vue Shadcn Admin
+ </h1>
+</p>
 
-Admin Dashboard UI crafted with Shadcn and Vite. Built with responsiveness and accessibility in mind.
+![hero](src/assets/images/screenshot-dark.png)
+![hero](src/assets/images/screenshot-light.png)
 
-![alt text](public/images/shadcn-admin.png)
+## Preview
+[https://vue-shadcn-dashboard.vercel.app/](https://vue-shadcn-dashboard.vercel.app/)
 
-I've been creating dashboard UIs at work and for my personal projects. I always wanted to make a reusable collection of dashboard UI for future projects; and here it is now. While I've created a few custom components, some of the code is directly adapted from ShadcnUI examples.
+## Documentation
 
-> This is not a starter project (template) though. I'll probably make one in the future.
+[View documentation here](https://www.shadcn-vue.com/docs/introduction.html)
 
-## Features
+## Credits
 
-- Light/dark mode
-- Responsive
-- Accessible
-- With built-in Sidebar component
-- Global Search Command
-- 10+ pages
-- Extra custom components
+All credits go to these open-source works and resources
 
-## Tech Stack
-
-**UI:** [ShadcnUI](https://ui.shadcn.com) (TailwindCSS + RadixUI)
-
-**Build Tool:** [Vite](https://vitejs.dev/)
-
-**Routing:** [TanStack Router](https://tanstack.com/router/latest)
-
-**Type Checking:** [TypeScript](https://www.typescriptlang.org/)
-
-**Linting/Formatting:** [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/)
-
-**Icons:** [Tabler Icons](https://tabler.io/icons)
-
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/satnaing/shadcn-admin.git
-```
-
-Go to the project directory
-
-```bash
-  cd shadcn-admin
-```
-
-Install dependencies
-
-```bash
-  pnpm install
-```
-
-Start the server
-
-```bash
-  pnpm run dev
-```
-
-## Author
-
-Crafted with 🤍 by [@satnaing](https://github.com/satnaing)
-
-## License
-
-Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+- [Shadcn UI](https://ui.shadcn.com) for creating this beautiful project.
+- [Vue Shadcn UI](https://www.shadcn-vue.com/) for the community-led [Vue](https://vuejs.org/) port of [shadcn/ui](https://ui.shadcn.com).
+- [Shadcn Svelte](https://shadcn-svelte.com) for some inspiration for registry.
+- [Radix Vue](https://radix-vue.com) for doing all the hard work to make sure components are accessible.
+- [VueUse](https://vueuse.org) for providing many useful utilities.
+- [ahmedmayara](https://github.com/ahmedmayara/shadcn-vue) for populating many components

@@ -1,0 +1,9 @@
+Here's a summary of how the API system works:
+
+Authentication: The /auth endpoint is used for authentication verification. It calls the ${XAHOD_CONTROL_API_ENDPOINT}/session/auth endpoint.
+Control Endpoints: The /getControlSettings, /updateState, and /updateMaintenanceMode endpoints are used to manage the control settings of the system. They call the corresponding endpoints in the Control API.
+Exchange Endpoints: The /exchange endpoint is used to interact with the Bitrue exchange. It has multiple sub-endpoints based on the action parameter, such as sync_exchange, get_trades, and get_balance.
+Maintenance Endpoints: The /maintenance endpoint is used to manage the maintenance mode of the system. It calls two endpoints in the Control API: ${XAHOD_CONTROL_API_ENDPOINT}/control/settings and ${XAHOD_CONTROL_API_ENDPOINT}/control/maintenance.
+Market Endpoints: The /market endpoint is used to retrieve market data. It calls the ${XAHOD_CONTROL_API_ENDPOINT}/market/prices endpoint.
+Other Endpoints: The /memo-data, /status, /xahodc/transfer, and /xahodc/trading-rates endpoints are used for various other functions.
+To access these endpoints, you need to set the apiService.baseUrl to the correct Control API endpoint (e.g., https://b1fbbcad16de.ngrok.app) and include the x-ms-client-principal header in the request.
