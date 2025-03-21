@@ -27,12 +27,26 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': rootDir,
+        '@/registry/new-york/ui/': path.resolve(__dirname, 'new_ui_framework_shadcn_vue/src/registry/new-york/ui/'),
       }
     },
     build: {
       minify: production,
       sourcemap: production,
       outDir: path.resolve(rootDir, '..', 'dist'),
+    },
+    server: {
+      host: '0.0.0.0',
+      port: 50044,
+    },
+    optimizeDeps: {
+      include: [
+        '@/registry/new-york/ui/button',
+        '@/registry/new-york/ui/card',
+        '@/registry/new-york/ui/tabs',
+        '@/registry/new-york/ui/input',
+        '@/registry/new-york/ui/avatar',
+      ],
     },
   }
 });

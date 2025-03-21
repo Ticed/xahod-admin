@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { DateRange } from 'reka-ui'
 import { cn } from '@/lib/utils'
-import { Button } from '@/registry/new-york/ui/button'
+import { Button } from '@/components/ui/button'
 
 import {
   Popover,
