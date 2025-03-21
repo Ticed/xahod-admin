@@ -4,9 +4,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from '@/registry/new-york/ui/avatar'
-import { Button } from '@/registry/new-york/ui/button'
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '@/registry/new-york/ui/command'
+} from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '@/components/ui/command'
 
 import {
   Dialog,
@@ -16,26 +16,24 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/registry/new-york/ui/dialog'
-import { Input } from '@/registry/new-york/ui/input'
-import { Label } from '@/registry/new-york/ui/label'
+} from '@/components/ui/dialog'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/registry/new-york/ui/popover'
+} from '@/components/ui/popover'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/registry/new-york/ui/select'
+} from '@/components/ui/select'
 import { ref } from 'vue'
-import CaretSortIcon from '~icons/radix-icons/caret-sort'
-import CheckIcon from '~icons/radix-icons/check'
-import PlusCircledIcon from '~icons/radix-icons/plus-circled'
+import { ChevronDown, Check, PlusCircle } from 'lucide-vue-next'
 
 const groups = [
   {
@@ -88,7 +86,7 @@ const selectedTeam = ref<Team>(groups[0].teams[0])
             <AvatarFallback>SC</AvatarFallback>
           </Avatar>
           {{ selectedTeam.label }}
-          <CaretSortIcon class="ml-auto h-4 w-4 shrink-0 opacity-50" />
+          <ChevronDown class="ml-auto h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent class="w-[200px] p-0">
@@ -116,7 +114,7 @@ const selectedTeam = ref<Team>(groups[0].teams[0])
                   <AvatarFallback>SC</AvatarFallback>
                 </Avatar>
                 {{ team.label }}
-                <CheckIcon
+                <Check
                   :class="cn('ml-auto h-4 w-4',
                              selectedTeam.value === team.value
                                ? 'opacity-100'
@@ -137,7 +135,7 @@ const selectedTeam = ref<Team>(groups[0].teams[0])
                     showNewTeamDialog = true
                   }"
                 >
-                  <PlusCircledIcon class="mr-2 h-5 w-5" />
+                  <PlusCircle class="mr-2 h-5 w-5" />
                   Create Team
                 </CommandItem>
               </DialogTrigger>

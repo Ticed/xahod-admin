@@ -7,8 +7,8 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/registry/new-york/ui/popover'
-import { RangeCalendar } from '@/registry/new-york/ui/range-calendar'
+} from '@/components/ui/popover'
+import { RangeCalendar } from '@/components/ui/daterange-picker'
 import { CalendarDate, DateFormatter, getLocalTimeZone } from '@internationalized/date'
 import { Calendar as CalendarIcon } from 'lucide-vue-next'
 import { ref } from 'vue'
