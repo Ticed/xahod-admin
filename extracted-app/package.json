@@ -1,0 +1,27 @@
+{
+  "name": "xahod-core",
+  "version": "1.0.0",
+  "description": "Framework-agnostic core business logic for XAHOD HQ",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xahod",
+    "trading",
+    "cryptocurrency"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "tslog": "^4.9.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.0.0"
+  }
+}
