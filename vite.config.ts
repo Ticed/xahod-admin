@@ -5,13 +5,13 @@ import tailwind from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 
 export default defineConfig(({ mode }) => {
-  const rootDir = path.resolve(__dirname, 'src');
+  const rootDir = path.resolve(__dirname);
+  const srcDir = path.resolve(__dirname, 'src');
   const env = loadEnv(mode, process.cwd(), '');
   const production = env.NODE_ENV === 'production';
 
   return {
-    root: rootDir,
-    base: '/',
+    base: '/xahod-admin/',
     appType: 'spa',
     plugins: [
       vue(),
@@ -26,18 +26,19 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': rootDir,
+        '@': srcDir,
         '@/registry/new-york/ui/': path.resolve(__dirname, 'new_ui_framework_shadcn_vue/src/registry/new-york/ui/'),
       }
     },
     build: {
       minify: production,
       sourcemap: production,
-      outDir: path.resolve(rootDir, '..', 'dist'),
+      outDir: path.resolve(__dirname, 'dist'),
     },
     server: {
       host: '0.0.0.0',
-      port: 50044,
+      port: 5173,
+      strictPort: true,
     },
     optimizeDeps: {
       include: [

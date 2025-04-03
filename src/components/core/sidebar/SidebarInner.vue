@@ -86,7 +86,7 @@ const toggleSidebar = () => {
                           <Icon :name="child.icon" />
                         </span>
                         <transition name="fade" :duration="300">
-                          <span v-show="store.sidebarExpand">{{ child.title }}</span>
+                          <span v-show="store.sidebarExpanded">{{ child.title }}</span>
                         </transition>
                       </Toggle>
                     </TooltipTrigger>
@@ -121,7 +121,7 @@ const toggleSidebar = () => {
                           <Icon name="AlertTriangle" />
                         </span>
                         <transition name="fade" :duration="300">
-                          <span v-show="store.sidebarExpand">404 Page</span>
+                          <span v-show="store.sidebarExpanded">404 Page</span>
                         </transition>
                       </Toggle>
                     </TooltipTrigger>
@@ -145,7 +145,7 @@ const toggleSidebar = () => {
                           <Icon name="LogIn" />
                         </span>
                         <transition name="fade" :duration="300">
-                          <span v-show="store.sidebarExpand">Login</span>
+                          <span v-show="store.sidebarExpanded">Login</span>
                         </transition>
                       </Toggle>
                     </TooltipTrigger>

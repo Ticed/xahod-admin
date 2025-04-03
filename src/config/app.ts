@@ -16,29 +16,47 @@ export const APP_MENU: Record<string, { name: string, routes: IDashboardMenus[] 
         title: 'Dashboard',
         icon: 'LayoutDashboard',
         path: 'home',
+        description: 'Overview and Recent Activity'
       },
       {
-        title: 'Tasks',
-        icon: 'ClipboardCheck',
-        path: 'task',
-        description: 'Manage Tasks'
+        title: 'Transactions',
+        icon: 'RepeatCircle',
+        path: 'transactions',
+        description: 'Manage XRP/XAH Transactions'
+      },
+      {
+        title: 'Trades',
+        icon: 'TrendingUp',
+        path: 'trades',
+        description: 'View Exchange Trades'
       },
     ],
   },
-  settings: {
-    name: 'General',
+  market: {
+    name: 'Market',
     routes: [
       {
-        path: 'user',
-        title: 'User',
-        icon: 'Users',
-        description: 'Manage User'
+        title: 'Market Overview',
+        icon: 'LineChart',
+        path: 'market',
+        description: 'Market Rates and Charts'
       },
+      {
+        title: 'Analytics',
+        icon: 'BarChart',
+        path: 'analytics',
+        description: 'Performance and Profitability Reports'
+      },
+    ]
+  },
+  settings: {
+    name: 'System',
+    routes: [
       {
         path: 'settings',
         title: 'Settings',
         icon: 'Settings2',
-        description: 'Settings'
+        description: 'System Configuration'
       },
     ],
   },

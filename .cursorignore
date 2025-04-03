@@ -1,0 +1,7 @@
+new_ui_framework_shadcn_vue
+
+# Editor directories and files
+
+!.vscode/extensions.json
+.idea
+*.suo

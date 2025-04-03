@@ -28,3 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+new_ui_framework_shadcn_vue
+extracted-app/
+example-pages/
+

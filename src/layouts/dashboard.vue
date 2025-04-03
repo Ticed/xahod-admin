@@ -1,9 +1,20 @@
 <script setup lang="ts">
+import { onMounted, onBeforeUnmount } from 'vue';
 import DashboardSidebar from '@/components/core/sidebar/DashboardSidebar.vue';
 import DashboardNavbar from '@/components/core/DashboardNavbar.vue';
 import { useAppStore } from '@/stores/app';
 
 const store = useAppStore();
+
+// Initialize the theme and sidebar when the dashboard mounts
+onMounted(() => {
+  store.initTheme();
+});
+
+// Clean up event listeners when unmounting
+onBeforeUnmount(() => {
+  store.appUnmount();
+});
 </script>
 
 <template>
